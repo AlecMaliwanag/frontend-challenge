@@ -9,7 +9,8 @@ request.get('http://localhost:3000/PurchaseOrders', function (error, response, b
     //handle error do I requiry the db or redirect to a 404 page?
     console.log(error)
   } else {
-    console.log('body:', body);
+    console.log(typeof body);
+    transformData(JSON.parse(body));
     ReactDOM.render(<TopSalesList PurchaseOrders = {body}/>, document.getElementById('app'));
   }
 });

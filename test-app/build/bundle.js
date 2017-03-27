@@ -38346,114 +38346,142 @@ module.exports = rng;
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 (function webpackUniversalModuleDefinition(root, factory) {
-	if (( false ? 'undefined' : _typeof(exports)) === 'object' && ( false ? 'undefined' : _typeof(module)) === 'object') module.exports = factory();else if (true) !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+  if (( false ? 'undefined' : _typeof(exports)) === 'object' && ( false ? 'undefined' : _typeof(module)) === 'object') module.exports = factory();else if (true) !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));else if ((typeof exports === 'undefined' ? 'undefined' : _typeof(exports)) === 'object') exports["Utils"] = factory();else root["Utils"] = factory();
 })(undefined, function () {
-	return (/******/function (modules) {
-			// webpackBootstrap
-			/******/ // The module cache
-			/******/var installedModules = {};
-			/******/
-			/******/ // The require function
-			/******/function __webpack_require__(moduleId) {
-				/******/
-				/******/ // Check if module is in cache
-				/******/if (installedModules[moduleId])
-					/******/return installedModules[moduleId].exports;
-				/******/
-				/******/ // Create a new module (and put it into the cache)
-				/******/var module = installedModules[moduleId] = {
-					/******/i: moduleId,
-					/******/l: false,
-					/******/exports: {}
-					/******/ };
-				/******/
-				/******/ // Execute the module function
-				/******/modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-				/******/
-				/******/ // Flag the module as loaded
-				/******/module.l = true;
-				/******/
-				/******/ // Return the exports of the module
-				/******/return module.exports;
-				/******/
-			}
-			/******/
-			/******/
-			/******/ // expose the modules object (__webpack_modules__)
-			/******/__webpack_require__.m = modules;
-			/******/
-			/******/ // expose the module cache
-			/******/__webpack_require__.c = installedModules;
-			/******/
-			/******/ // identity function for calling harmony imports with the correct context
-			/******/__webpack_require__.i = function (value) {
-				return value;
-			};
-			/******/
-			/******/ // define getter function for harmony exports
-			/******/__webpack_require__.d = function (exports, name, getter) {
-				/******/if (!__webpack_require__.o(exports, name)) {
-					/******/Object.defineProperty(exports, name, {
-						/******/configurable: false,
-						/******/enumerable: true,
-						/******/get: getter
-						/******/ });
-					/******/
-				}
-				/******/
-			};
-			/******/
-			/******/ // getDefaultExport function for compatibility with non-harmony modules
-			/******/__webpack_require__.n = function (module) {
-				/******/var getter = module && module.__esModule ?
-				/******/function getDefault() {
-					return module['default'];
-				} :
-				/******/function getModuleExports() {
-					return module;
-				};
-				/******/__webpack_require__.d(getter, 'a', getter);
-				/******/return getter;
-				/******/
-			};
-			/******/
-			/******/ // Object.prototype.hasOwnProperty.call
-			/******/__webpack_require__.o = function (object, property) {
-				return Object.prototype.hasOwnProperty.call(object, property);
-			};
-			/******/
-			/******/ // __webpack_public_path__
-			/******/__webpack_require__.p = "";
-			/******/
-			/******/ // Load entry module and return exports
-			/******/return __webpack_require__(__webpack_require__.s = 0);
-			/******/
-		}(
-		/************************************************************************/
-		/******/[
-		/* 0 */
-		/***/function (module, exports, __webpack_require__) {
+  return (/******/function (modules) {
+      // webpackBootstrap
+      /******/ // The module cache
+      /******/var installedModules = {};
+      /******/
+      /******/ // The require function
+      /******/function __webpack_require__(moduleId) {
+        /******/
+        /******/ // Check if module is in cache
+        /******/if (installedModules[moduleId])
+          /******/return installedModules[moduleId].exports;
+        /******/
+        /******/ // Create a new module (and put it into the cache)
+        /******/var module = installedModules[moduleId] = {
+          /******/i: moduleId,
+          /******/l: false,
+          /******/exports: {}
+          /******/ };
+        /******/
+        /******/ // Execute the module function
+        /******/modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+        /******/
+        /******/ // Flag the module as loaded
+        /******/module.l = true;
+        /******/
+        /******/ // Return the exports of the module
+        /******/return module.exports;
+        /******/
+      }
+      /******/
+      /******/
+      /******/ // expose the modules object (__webpack_modules__)
+      /******/__webpack_require__.m = modules;
+      /******/
+      /******/ // expose the module cache
+      /******/__webpack_require__.c = installedModules;
+      /******/
+      /******/ // identity function for calling harmony imports with the correct context
+      /******/__webpack_require__.i = function (value) {
+        return value;
+      };
+      /******/
+      /******/ // define getter function for harmony exports
+      /******/__webpack_require__.d = function (exports, name, getter) {
+        /******/if (!__webpack_require__.o(exports, name)) {
+          /******/Object.defineProperty(exports, name, {
+            /******/configurable: false,
+            /******/enumerable: true,
+            /******/get: getter
+            /******/ });
+          /******/
+        }
+        /******/
+      };
+      /******/
+      /******/ // getDefaultExport function for compatibility with non-harmony modules
+      /******/__webpack_require__.n = function (module) {
+        /******/var getter = module && module.__esModule ?
+        /******/function getDefault() {
+          return module['default'];
+        } :
+        /******/function getModuleExports() {
+          return module;
+        };
+        /******/__webpack_require__.d(getter, 'a', getter);
+        /******/return getter;
+        /******/
+      };
+      /******/
+      /******/ // Object.prototype.hasOwnProperty.call
+      /******/__webpack_require__.o = function (object, property) {
+        return Object.prototype.hasOwnProperty.call(object, property);
+      };
+      /******/
+      /******/ // __webpack_public_path__
+      /******/__webpack_require__.p = "";
+      /******/
+      /******/ // Load entry module and return exports
+      /******/return __webpack_require__(__webpack_require__.s = 0);
+      /******/
+    }(
+    /************************************************************************/
+    /******/[
+    /* 0 */
+    /***/function (module, exports, __webpack_require__) {
 
-			"use strict";
+      "use strict";
 
-			Object.defineProperty(exports, "__esModule", {
-				value: true
-			});
-			exports.default = transformData;
-			//feel free to use lodash; it provides alot of type methods that are native to other languages
-			//import {function} from 'lodash';
+      Object.defineProperty(exports, "__esModule", {
+        value: true
+      });
+      exports.default = transformData;
+      //feel free to use lodash; it provides alot of type methods that are native to other languages
+      //import {function} from 'lodash';
 
-			//transform data if needed here
-			function transformData(data) {
-				return data;
-			};
+      //transform data if needed here
+      function transformData(data) {
+        //transform data to a single object of products with count and revenue
+        // double iterate over array, if it exists in new object, aggregate the values
+        var soldProducts = {};
+        var items = [];
+        data.forEach(function (purchase) {
+          purchase.products.forEach(function (item) {
+            if (soldProducts[item.name]) {
+              soldProducts[item.name].count += item.order_count;
+              soldProducts[item.name].revenue += item.order_count * (item.vendor_price.value / Math.pow(10, item.vendor_price.scale));
+            } else {
+              soldProducts[item.name] = {
+                count: item.order_count,
+                revenue: item.order_count * (item.vendor_price.value / Math.pow(10, item.vendor_price.scale)),
+                name: item.name
+              };
+            }
+          });
+        });
+        //push every single object into an array
+        for (var key in soldProducts) {
+          items.push(soldProducts[key]);
+        }
+        //sort array
+        items.sort(function (a, b) {
+          if (a.count > b.count) return -1;else if (a.count === b.count) {
+            if (a.revenue > b.revenue) return -1;else return 1;
+          } else return 1;
+        });
+        return items.slice(0, 10);
+      }
 
-			/***/
-		}])
-	);
+      /***/
+    }])
+  );
 });
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(133)(module)))
 
@@ -45560,6 +45588,8 @@ function DoublyLinkedNode(key, val) {
 "use strict";
 /* WEBPACK VAR INJECTION */(function(console) {
 
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 var _react = __webpack_require__(226);
 
 var _react2 = _interopRequireDefault(_react);
@@ -45587,7 +45617,8 @@ _request2.default.get('http://localhost:3000/PurchaseOrders', function (error, r
     //handle error do I requiry the db or redirect to a 404 page?
     console.log(error);
   } else {
-    console.log('body:', body);
+    console.log(typeof body === 'undefined' ? 'undefined' : _typeof(body));
+    (0, _transformData2.default)(JSON.parse(body));
     _reactDom2.default.render(_react2.default.createElement(_index2.default, { PurchaseOrders: body }), document.getElementById('app'));
   }
 });
