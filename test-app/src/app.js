@@ -8,7 +8,7 @@ request.get('http://localhost:3000/PurchaseOrders', function (error, response, b
   if (error) {
     console.log(error);
   } else {
-  ReactDOM.render(<TopSalesList purchaseOrders = {body} />, document.getElementById('app'));
+    ReactDOM.render(<TopSalesList purchaseOrders = {body} />, document.getElementById('app'));
   }
   
 });

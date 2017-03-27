@@ -10961,20 +10961,41 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
           }, {
             key: 'render',
             value: function render() {
-              console.log('this ran');
-              console.log(this.state.data);
-              return _react2.default.createElement('div', null, _react2.default.createElement('div', null, 'all my small compoments', _react2.default.createElement('div', null, this.state.data.map(function (product, i) {
+              return _react2.default.createElement('div', null, _react2.default.createElement('div', { style: divStyle }, _react2.default.createElement('p', { style: listTitle }, 'Top Sales Items'), _react2.default.createElement('div', { style: itemRowWrapper }, this.state.data.map(function (product, i) {
                 return _react2.default.createElement(_top_sales_itemComponent2.default, { revenue: product.revenue, name: product.name, count: product.count, index: i });
-              }))), _react2.default.createElement('p', null, 'test'));
+              }))));
             }
           }]);
 
           return TopSalesList;
         }(_react2.default.Component);
+        /*============================================STYLES============================================*/
+
+        var divStyle = {
+          display: 'flex',
+          flexDirection: 'column',
+          margin: '5% 2% 5% 5%',
+          width: '48%',
+          borderStyle: 'solid',
+          borderWidth: '1px',
+          borderColor: 'EEEEEF',
+          justifyContent: 'center',
+          alignItems: 'center'
+        };
+        var listTitle = {
+          fontSize: '16px',
+          color: '#000000',
+          display: 'flex',
+          alignSelf: 'flex-start',
+          paddingLeft: '2%',
+          marginTop: '2%',
+          marginBottom: '5%'
+        };
+        var itemRowWrapper = {
+          width: '95%'
+        };
 
         exports.default = TopSalesList;
-
-        //{
 
         /***/
       },
@@ -11115,13 +11136,12 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
                   for (var key in soldProducts) {
                     items.push(soldProducts[key]);
                   }
-                  //sort array
+                  //sort array first by count, then by revenue
                   items.sort(function (a, b) {
                     if (a.count > b.count) return -1;else if (a.count === b.count) {
                       if (a.revenue > b.revenue) return -1;else return 1;
                     } else return 1;
                   });
-                  console.log(items.slice(0, 10));
                   return items.slice(0, 10);
                 }
 
@@ -11231,7 +11251,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
 
         // module
-        exports.push([module.i, "", ""]);
+        exports.push([module.i, "body {\n  font-family: 'Roboto', sans-serif;\n  font-weight: 300; }\n", ""]);
 
         // exports
 
@@ -14210,9 +14230,49 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
         }
 
         var TopSalesItem = function TopSalesItem(props) {
-
-          return _react2.default.createElement('div', null, _react2.default.createElement('p', null, 'name : ', props.name), _react2.default.createElement('p', null, 'count: ', props.count, ' '), _react2.default.createElement('p', null, 'Revenue: ', props.revenue));
+          return _react2.default.createElement('div', { style: itemWrapper }, _react2.default.createElement('div', { style: numberWrapper }, _react2.default.createElement('p', { style: numberStyle }, ' ', props.index + 1, ' ')), _react2.default.createElement('div', { style: productTextWrapper }, _react2.default.createElement('p', { style: itemName }, props.name), _react2.default.createElement('p', { style: itemRevenue }, props.revenue)));
         };
+        /*============================================STYLES============================================*/
+        var itemWrapper = {
+          width: '100%',
+          height: '44px',
+          display: 'flex',
+          flexDirection: 'row'
+        };
+        var numberWrapper = {
+          width: '15%',
+          height: '100%'
+        };
+        var numberStyle = {
+          margin: 'auto',
+          backgroundColor: '9BCA3C',
+          borderRadius: '100%',
+          textAlign: 'center',
+          width: '30px',
+          height: '23px',
+          paddingTop: '7px',
+          color: 'white',
+          marginTop: '8px'
+        };
+        var productTextWrapper = {
+          width: '85%',
+          marginBottom: '0px',
+          borderTopWidth: '1px',
+          borderTopStyle: 'solid',
+          borderColor: 'EEEEEF'
+        };
+        var itemName = {
+          width: '100%',
+          fontSize: '14px',
+          marginTop: '4px',
+          marginBottom: '0px'
+        };
+        var itemRevenue = {
+          marginTop: '4px',
+          fontSize: '10px',
+          color: '#CCCCCC'
+        };
+
         exports.default = TopSalesItem;
 
         /***/
@@ -15154,7 +15214,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(console, module) {var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+/* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
@@ -15283,13 +15343,12 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
         for (var key in soldProducts) {
           items.push(soldProducts[key]);
         }
-        //sort array
+        //sort array first by count, then by revenue
         items.sort(function (a, b) {
           if (a.count > b.count) return -1;else if (a.count === b.count) {
             if (a.revenue > b.revenue) return -1;else return 1;
           } else return 1;
         });
-        console.log(items.slice(0, 10));
         return items.slice(0, 10);
       }
 
@@ -15297,7 +15356,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
     }])
   );
 });
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(12), __webpack_require__(83)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(83)(module)))
 
 /***/ }),
 /* 86 */

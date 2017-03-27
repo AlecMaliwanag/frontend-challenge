@@ -25,7 +25,7 @@ export default function transformData (data) {
   for (let key in soldProducts) {
     items.push(soldProducts[key]);
   }
-  //sort array
+  //sort array first by count, then by revenue
   items.sort((a, b) => {
     if (a.count > b.count) return -1;
     else if (a.count === b.count) {
@@ -33,6 +33,5 @@ export default function transformData (data) {
       else return 1;
     } else return 1;
   });
-  console.log(items.slice(0,10));
   return items.slice(0,10);
 }

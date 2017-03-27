@@ -17,22 +17,42 @@ class TopSalesList extends React.Component  {
   }
 
   render() {
-    console.log('this ran');
-    console.log(this.state.data);
     return (
       <div>
-      <div>all my small compoments
-      <div>
+      <div style={divStyle}>
+      <p style={listTitle}>Top Sales Items</p>
+      <div style={itemRowWrapper}>
       {this.state.data.map((product, i) => <TopSalesItem revenue={product.revenue} name={product.name} count={product.count} index = {i}/>)}
       </div>
       </div>
-
-      <p>test</p>
       </div>
     );
   }
 }
+/*============================================STYLES============================================*/
+const divStyle = {
+  display: 'flex',
+  flexDirection: 'column',
+  margin: '5% 2% 5% 5%',
+  width: '48%',
+  borderStyle: 'solid',
+  borderWidth: '1px',
+  borderColor: 'EEEEEF',
+  justifyContent: 'center',
+  alignItems: 'center'
+};
+const listTitle = {
+  fontSize: '16px',
+  color: '#000000',
+  display: 'flex',
+  alignSelf: 'flex-start',
+  paddingLeft: '2%',
+  marginTop: '2%',
+  marginBottom: '5%'
+};
+const itemRowWrapper = {
+  width: '95%'
+};
 
 export default TopSalesList;
 
-//{
