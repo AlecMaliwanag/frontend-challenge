@@ -1,9 +1,13 @@
-//make sure to import ng-react then include react in your app
+/*Instructions for using React in Angular.*/
+//For additional references the docs for ngreact can be found here:
+//https://github.com/ngReact/ngReact
+
+//1: make sure to import ng-react then include react in your app
 var app = angular.module('app', ['react']);
 //using webpack also import react component
 import TopSalesList from './top_sales.component.js'
 
-//create a service to get your data
+//2: create a service to get your data
 angular.module('getData', [])
 .factory('getFunctions', function($http, sharedData) {
   return $http({
@@ -12,21 +16,19 @@ angular.module('getData', [])
   })
 }
 
-//create a controller for your react component
+//3: create a controller for your react component
 angular.module('app.reactController',[])
 .controller('reactList', function($scope, sharedData) {
   $scope.purchaseHistory = sharedData;
 })
 
-//add the react component using value
+//4: add the react component using value
 app.value('TopSalesList', TopSalesList);
 
-//heres an example of how to inject your html
+//5: heres an example of how to inject your html
 <body ng-app="app">
   <div ng-controller="reactList">
     <react-component name="TopSalesList" props="purchaseHistory" watch-depth="reference"/>
   </div>
 </body>  
 
-//For additional references the docs for ngreact can be found here:
-//https://github.com/ngReact/ngReact
