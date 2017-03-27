@@ -51,7 +51,8 @@ const listTitle = {
   marginBottom: '5%'
 };
 const itemRowWrapper = {
-  width: '95%'
+  width: '95%',
+  marginLeft: '-5%'
 };
 
 export default TopSalesList;

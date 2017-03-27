@@ -10992,7 +10992,8 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
           marginBottom: '5%'
         };
         var itemRowWrapper = {
-          width: '95%'
+          width: '95%',
+          marginLeft: '-5%'
         };
 
         exports.default = TopSalesList;
