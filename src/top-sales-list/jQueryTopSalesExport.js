@@ -2,12 +2,14 @@ const React = require('react');
 const TopSalesList = require('./top_sales.component.js');
 var sampleData = require('../../data/db.json');
 
-// function RenderTopSalesList = (selector) {
-//   React.render(
-//     <TopSalesList />,
-//     document.querySelectorAll(selector)[0] //first item in array
-//   );
-// }
+/*==================================Instructions=======================================*/
+//Here is a jquery plugin than compiles the TopSalesList react component 
+//1:  In order to use, run webpack.jquery.config.js in order to compile into es5
+//2:  include react in your jquery app
+//3:  include your new jquery plug in as a script tag ie: <script src ='./dist/TopSalesList/jqueryComponent.js'</script>
+//4:  Call the plugin ie: 
+        //$("#element").topSalesList({});
+// for additonal references see the plugin boilerplate docs at : https://github.com/jquery-boilerplate/jquery-boilerplate
 
 //Based off of boilerplate jquery plugin constructor
 
