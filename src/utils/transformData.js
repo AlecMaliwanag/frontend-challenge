@@ -33,5 +33,6 @@ export default function transformData (data) {
       else return 1;
     } else return 1;
   });
+  console.log(items.slice(0,10));
   return items.slice(0,10);
 }

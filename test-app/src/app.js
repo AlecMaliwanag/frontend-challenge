@@ -6,11 +6,9 @@ import request from 'request';
 
 request.get('http://localhost:3000/PurchaseOrders', function (error, response, body) {
   if (error) {
-    //handle error do I requiry the db or redirect to a 404 page?
-    console.log(error)
+    console.log(error);
   } else {
-    console.log(typeof body);
-    transformData(JSON.parse(body));
-    ReactDOM.render(<TopSalesList PurchaseOrders = {body}/>, document.getElementById('app'));
+  ReactDOM.render(<TopSalesList purchaseOrders = {body} />, document.getElementById('app'));
   }
+  
 });
