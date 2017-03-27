@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "eslint": "^3.18.0",
+    "jquery": "^3.2.1",
     "lodash": "^4.17.4",
     "ngreact": "^0.3.0",
     "react": "^15.4.2",
